@@ -4,6 +4,10 @@
   margin-top: 5vw;
 }
 
+#more {
+  display: none;
+}
+
 @media screen and (min-width:970px) {
   .flexbox-item {
     max-width: 960px;
@@ -76,7 +80,7 @@
     line-height: 1rem;
     color: #343434;
   }
-  
+
   .btn-time {
     font-family: 'Open Sans';
     margin-left: 3px;
@@ -85,16 +89,29 @@
     border-radius: 11px;
   }
 
+  .btn-more {
+    font-family: 'Open Sans';
+    margin-left: 3px;
+    margin-right: 3px;
+    background: #ffc5f8;
+    border-radius: 11px;
+  }
+
   table {
     margin-top: 37px;
   }
-  
-    .price {
-      font-family: 'Open Sans';
-      font-size: 2.3rem;
-      line-height: 1.5rem;
-    }
-  
+
+  .price {
+    font-family: 'Open Sans';
+    font-size: 2.3rem;
+    line-height: 1.5rem;
+  }
+  .one-price {
+    font-family: 'Open Sans';
+    font-size: 2.8rem;
+    padding-right: 2rem;
+  }
+
   .btn-detail {
     position: relative;
     width: 187px;
@@ -191,6 +208,14 @@
     font-size: 1.2vw;
   }
 
+  .btn-more {
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    background: #ffc5f8;
+    border-radius: 11px;
+    font-size: 1.2vw;
+  }
+
   table {
     margin-top: 4vw;
   }
@@ -199,6 +224,12 @@
     font-family: Open Sans;
     font-size: 3.5vw;
     line-height: 2.5vw;
+  }
+
+  .one-price {
+    font-family: 'Open Sans';
+    font-size: 4.5vw;
+    padding-right: 2vw;
   }
 
   .btn-detail {
@@ -294,6 +325,14 @@
     border-radius: 11px;
     font-size: 2vw;
   }
+  .btn-more {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Open Sans';
+    background: #ffc5f8;
+    border-radius: 11px;
+    font-size: 2vw;
+  }
 
   table {
     margin: 7vw 0vw 5vw 7vw;
@@ -303,6 +342,12 @@
     font-family: Open Sans;
     font-size: 5vw;
     line-height: 3.5vw;
+  }
+
+  .one-price {
+    font-family: 'Open Sans';
+    font-size: 7vw;
+    padding-right: 2vw;
   }
 
   .btn-detail {
