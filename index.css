@@ -1,365 +1,174 @@
-.flexbox-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 5vw;
+/* UTILITIES */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#more {
+body {
+  font-family: cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(0, 39, 39);
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+}
+
+/* LOGO */
+
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 1rem;
+}
+
+.menu li:hover {
+  background-color: rgb(21, 60, 60);
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(0, 39, 39);
+  padding: 1em 0;
+  right: 0.5%;
+  position: absolute;
+  /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li+li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 20em;
+  text-align: left;
+}
+
+.dropdown li:hover {
+  background-color: rgb(21, 60, 60);
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
   display: none;
 }
 
-@media screen and (min-width:970px) {
-  .flexbox-item {
-    max-width: 960px;
-    height: auto;
-    flex-grow: 1;
-    border: 0.5px solid #8E8E8E;
-    border-radius: 15px;
-    margin-bottom: 30px;
-  }
+/*HAMBURGER MENU*/
 
-  .container {
-    position: relative;
-  }
-
-  .text-block {
-    position: absolute;
-    margin-top: 50px;
-    background-color: #099CE8;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1px;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .img {
-    float: left;
-    max-width: 100%;
-    margin-right: 30px;
-    border-radius: 16px 0px 0px 16px;
-  }
-
-  .img-tick {
-    width: 16px;
-    height: auto;
-  }
-
-  p.header {
-    position: relative;
-    margin-right: 20px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: #000000;
-  }
-
-  p.time-hor {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: #9E9E9E;
-  }
-
-  p.time-ver {
-    display: none;
-  }
-
-  .tick {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.05rem;
-    line-height: 1rem;
-    color: #343434;
-  }
-
-  .btn-time {
-    font-family: 'Open Sans';
-    margin-left: 3px;
-    margin-right: 3px;
-    background: #C5DCFF;
-    border-radius: 11px;
-  }
-
-  .btn-more {
-    font-family: 'Open Sans';
-    margin-left: 3px;
-    margin-right: 3px;
-    background: #ffc5f8;
-    border-radius: 11px;
-  }
-
-  table {
-    margin-top: 37px;
-  }
-
-  .price {
-    font-family: 'Open Sans';
-    font-size: 2.3rem;
-    line-height: 1.5rem;
-  }
-  .one-price {
-    font-family: 'Open Sans';
-    font-size: 2.8rem;
-    padding-right: 2rem;
-  }
-
-  .btn-detail {
-    position: relative;
-    width: 187px;
-    height: 52px;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin-left: 15px;
-    color: #292929;
-    background: #FFD83C;
-    border-radius: 23px;
-  }
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
 }
 
-@media screen and (min-width: 651px) and (max-width:969px) {
-  .flexbox-item {
-    max-width: 950px;
-    height: auto;
-    flex-grow: 1;
-    border: 0.5px solid #8E8E8E;
-    border-radius: 15px;
-  }
-
-  .container {
-    position: relative;
-  }
-
-  .text-block {
-    position: absolute;
-    margin-top: 5vw;
-    background-color: #099CE8;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 2.5vw;
-    line-height: 1px;
-    color: white;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .img {
-    float: left;
-    max-width: 50%;
-    height: auto;
-    margin-right: 2vw;
-    border-radius: 16px 0px 0px 16px;
-  }
-
-  .img-tick {
-    width: 1.5vw;
-    height: auto;
-  }
-
-  p.header {
-    position: relative;
-    margin-right: 1vw;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.2vw;
-    color: #000000;
-  }
-
-  p.time-hor {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.5vw;
-    color: #9E9E9E;
-  }
-
-  p.time-ver {
-    display: none;
-  }
-
-  .tick {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.8vw;
-    line-height: 0.8vw;
-    color: #343434;
-  }
-
-  .btn-time {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    background: #C5DCFF;
-    border-radius: 11px;
-    font-size: 1.2vw;
-  }
-
-  .btn-more {
-    margin-left: 0.5vw;
-    margin-right: 0.5vw;
-    background: #ffc5f8;
-    border-radius: 11px;
-    font-size: 1.2vw;
-  }
-
-  table {
-    margin-top: 4vw;
-  }
-
-  .price {
-    font-family: Open Sans;
-    font-size: 3.5vw;
-    line-height: 2.5vw;
-  }
-
-  .one-price {
-    font-family: 'Open Sans';
-    font-size: 4.5vw;
-    padding-right: 2vw;
-  }
-
-  .btn-detail {
-    position: relative;
-    padding: 1.2vw 3.2vw 1.2vw 3.2vw;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vw;
-    margin-left: 4vw;
-    color: #292929;
-    background: #FFD83C;
-    border-radius: 23px;
-  }
+.imgnav {
+  max-width: 100%;
 }
 
-@media screen and (max-width:650px) {
-  .flexbox-item {
-    max-width: 600px;
-    height: auto;
-    flex-grow: 1;
-    border: 0.5px solid #8E8E8E;
-    border-radius: 15px;
-  }
+.indent {
+  margin-left: 2vw;
+}
 
-  .container {
-    position: relative;
-  }
+/* APPLYING MEDIA QUERIES */
 
-  .text-block {
-    position: absolute;
-    margin-top: -60vw;
-    background-color: #099CE8;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 4.5vw;
-    line-height: 1px;
-    color: white;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
+@media (max-width: 768px) {
 
-  .img {
-    width: 100%;
-    border-radius: 16px 16px 0px 0px;
-  }
-
-  .img-tick {
-    width: 2.2vw;
-    height: auto;
-    margin-left: 4vw;
-  }
-
-  p.header {
-    position: relative;
-    margin-left: 4vw;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 3.5vw;
-    color: #000000;
-  }
-
-  p.time-hor {
+  .menu {
     display: none;
+    position: absolute;
+    background-color: rgb(0, 39, 39);
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
   }
 
-  p.time-ver {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.5vw;
-    color: #9E9E9E;
+  .menu li:hover {
+    display: inline-block;
+    background-color: rgb(21, 60, 60);
+    transition: 0.3s ease;
   }
 
-  .tick {
-    position: relative;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 2.8vw;
-    line-height: 1.8vw;
-    color: #343434;
+  .menu li+li {
+    margin-top: 12px;
   }
 
-  .btn-time {
-    margin-left: 1vw;
-    margin-right: 1vw;
-    font-family: 'Open Sans';
-    background: #C5DCFF;
-    border-radius: 11px;
-    font-size: 2vw;
-  }
-  .btn-more {
-    margin-left: 1vw;
-    margin-right: 1vw;
-    font-family: 'Open Sans';
-    background: #ffc5f8;
-    border-radius: 11px;
-    font-size: 2vw;
+  input[type=checkbox]:checked~.menu {
+    display: block;
   }
 
-  table {
-    margin: 7vw 0vw 5vw 7vw;
+  .hamburger {
+    display: block;
   }
 
-  .price {
-    font-family: Open Sans;
-    font-size: 5vw;
-    line-height: 3.5vw;
+  .dropdown {
+    right: 0.5%;
+    top: 30px;
+    line-height: 0.5rem;
+    transform: translateX(35%);
   }
 
-  .one-price {
-    font-family: 'Open Sans';
-    font-size: 7vw;
-    padding-right: 2vw;
+  .dropdown li {
+    padding: 0.5em 1em;
+    width: 19em;
+    text-align: left;
   }
 
-  .btn-detail {
-    position: relative;
-    padding: 2.2vw 8vw 2.2vw 8vw;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 4.5vw;
+  .dropdown li:hover {
+    background-color: rgb(21, 60, 60);
+  }
+
+  .imgnav {
+    max-width: 80%;
+  }
+
+  .indent {
     margin-left: 10vw;
-    color: #292929;
-    background: #FFD83C;
-    border-radius: 23px;
   }
+
 }
